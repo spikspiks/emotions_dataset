@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import pandas as pd
 
+st.set_page_config(page_title="About Me")
 
 model_performance = pd.DataFrame(columns=['Classifier','Training Time','Model Size'])
 model_performance.loc[0] = ["Decision Tree Classifier","8 min 38 sec","391 KB"]
 model_performance.loc[1] = ["Random Forest Classifier","4 min 25 sec","91.4 MB"]
 model_performance.loc[2] = ["LightGBM Classifier","4 sec","2.32 MB"]
-
 
 st.markdown("""
 This is a multiclass classification problem (the 6 classes being Sadness, Anger, Love, Surprise, Fear, Joy), with imbalanced classes.
